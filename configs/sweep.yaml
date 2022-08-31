@@ -1,0 +1,34 @@
+program: main.py
+method: grid
+metric:
+  goal: minimize
+  name: loss
+parameters:
+  model_name:
+    values: ["Einmalumdiewelt/T5-Base_GNAD", "aware-ai/byt5-german-grammar", "google/mt5-base", "google/byt5-base", "facebook/mbart-large-50-many-to-many-mmt", "facebook/m2m100_418M"]
+  num_epochs:
+    values: [3, 5, 10]
+  generation_max_length:
+    value: 277
+  train_batch_size:
+    value: 4
+  eval_batch_size:
+    value: 4
+  warmup_steps:
+    values: [0, 10, 100]
+  save_model:
+    value: True
+  test_size:
+    value: 0.2
+  random_gen_seed:
+    value: 42
+  project_dir:
+    value: "/home/Niklas.Kaemmer/AML4DH"
+  raw_path:
+    value: "data/ellipses_clean_20220720_145644.xlsx"
+  train_path:
+    value: "data/train.csv"
+  test_path:
+    value: "data/test.csv"
+  models_path:
+    value: "models/transformer/saved_models"

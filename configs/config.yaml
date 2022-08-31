@@ -1,0 +1,15 @@
+model_name: "aware-ai/byt5-german-grammar"
+num_epochs: 10
+generation_max_length: 277
+length_multiplier: 1.5
+train_batch_size: 8
+eval_batch_size: 8
+warmup_steps: 100
+save_model: True
+test_size: 0.2
+random_gen_seed: 42
+project_dir: "/home/Niklas.Kaemmer/AML4DH"
+raw_path: "data/ellipses_nodup_20220804_174013.xlsx"
+train_path: "data/train.csv"
+test_path: "data/test.csv"
+models_path: "models/transformer/saved_models"
